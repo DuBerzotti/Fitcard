@@ -1,0 +1,30 @@
+create table estabelecimento (
+		codigo serial primary key,	
+		razaosocial varchar(50) not null,
+		nomefantasia varchar(50),
+		cnpj varchar(18) not null,
+		email varchar(50),
+		endereco varchar(50),
+		cidade varchar(30),
+		estado varchar(30),
+		telefone varchar(14),
+		datacadastro date,
+		categoria varchar(255),
+		status varchar(10),
+		agencia varchar(5),
+		conta varchar(8)
+	)
+
+create table cadCategoria
+(
+  codigo serial primary key,
+  categoria varchar(80) unique
+  )
+
+insert into cadCategoria (categoria) values ('Supermercado');
+insert into cadCategoria (categoria) values ('Restaurante');
+insert into cadCategoria (categoria) values ('Borracharia');
+insert into cadCategoria (categoria) values ('Posto');
+insert into cadCategoria (categoria) values ('Oficina');
+
+
